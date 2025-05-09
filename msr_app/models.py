@@ -12,6 +12,7 @@ class CustomUser(AbstractUser):
     manager = models.ForeignKey('self', related_name='staff_members', null=True, blank=True, on_delete=models.SET_NULL)
     address = models.CharField(max_length=255, blank=True, null=True)
     phone_number = models.CharField(max_length=15, blank=True, null=True)
+    
 
     groups = models.ManyToManyField(
         Group,

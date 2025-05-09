@@ -29,6 +29,8 @@ ALLOWED_HOSTS = []
 
 
 AUTH_USER_MODEL = 'msr_app.CustomUser'
+ROLEPERMISSIONS_MODULE = 'msr_app.roles'
+
 
 # Application definition
 
