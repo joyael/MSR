@@ -1,0 +1,5 @@
+db.sqlite3
+mangage.py
+MSR/__pycache__/*
+msr_app/__pycache__/* 
+msr_app/migrations/__pycache__/*
