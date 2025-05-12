@@ -16,7 +16,7 @@ class CustomUser(AbstractUser):
 
     groups = models.ManyToManyField(
         Group,
-        related_name='customuser_set',  
+        related_name='customuser_set', 
         blank=True,
         help_text='The groups this user belongs to.',
         verbose_name='groups',
@@ -45,7 +45,8 @@ class Report(models.Model):
         ('rejected', 'Rejected'),
     ]
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
-    staff = models.ForeignKey(CustomUser , null=True, blank=True, on_delete=models.SET_NULL)
+    staff = models.ForeignKey(CustomUser, null=True, blank=True, on_delete=models.SET_NULL)
+    approved_date = models.DateField(blank=True, null=True)
 
     def __str__(self):
         return self.report_name

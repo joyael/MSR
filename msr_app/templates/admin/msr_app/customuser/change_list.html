@@ -1,0 +1,30 @@
+{% extends "admin/change_list.html" %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'msr_app/css/custom_admin.css' %}">
+{% endblock %}
+
+{% block content %}
+{% if request.user.role == 'manager' %}
+<div class="custom-admin-container">
+    <div class="staff-count-box">
+        <h2 class="staff-count-title">Staffs under me</h2>
+        <p class="staff-count-value">{{ cl.queryset.count|add:-1 }}</p>
+    </div>
+</div>
+{% elif request.user.is_superuser %}
+<div class="custom-admin-container">
+    <div class="staff-count-box">
+        <h2 class="staff-count-title">Total managers :</h2>
+        <p class="staff-count-value">{{ total_manager_count }}</p>
+    </div>
+    <div class="staff-count-box">
+        <h2 class="staff-count-title">Total staffs :</h2>
+        <p class="staff-count-value">{{ total_staff_count }}</p>
+    </div>
+</div>
+
+{% endif %}
+    {{ block.super }}  {# This will include the original content #}
+
+{% endblock %}

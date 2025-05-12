@@ -1,0 +1,74 @@
+
+.custom-admin-container {
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 70px;
+}
+
+.staff-count-box {
+    background-color: #ffffff; /* White background for the box */
+    border: 2px solid #7ca2b5; /* Blue border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the box */
+    text-align: center; /* Center the text */
+    margin-bottom: 10px;
+}
+
+.staff-count-title {
+    font-size: 1em; /* Larger font size for the title */
+    color: #333; /* Dark color for the title */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.staff-count-value {
+    font-size: 1em; /* Larger font size for the count */
+    color: #007bff; /* Blue color for the count */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+/* custom_admin.css */
+
+.custom-report-summary-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 50px;
+}
+
+.report-summary-title {
+    font-size: 1em; /* Larger font size for the title */
+    color: #333; /* Dark color for the title */
+    margin-bottom: 20px; /* Space below the title */
+    text-align: center; /* Center the title */
+}
+
+.report-summary-box {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space items evenly */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.report-summary-item {
+    background-color: #ffffff; /* White background for each item */
+    border: 2px solid #7ca2b5; /* Blue border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside the item */
+    text-align: center; /* Center the text */
+    margin: 10px; /* Space between items */
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, and base width */
+}
+
+.report-summary-label {
+    font-size: 1em; /* Font size for the label */
+    color: #333; /* Dark color for the label */
+    margin-bottom: 10px; /* Space below the label */
+}
+
+.report-summary-value {
+    font-size: 1em; /* Larger font size for the count */
+    color: #007bff; /* Blue color for the count */
+    font-weight: bold; /* Bold font for emphasis */
+}
