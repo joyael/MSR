@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#(-_et5*05lr@fq(_$87-b!1-3--4f@h$d($^r-fk@ig+1v&z=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['13.60.53.9', 'localhost', '127.0.0.1', 'ec2-13-60-53-9.eu-north-1.compute.amazonaws.com', 'd1pu68l2i4fez5.cloudfront.net']
 
 AUTH_USER_MODEL = 'msr_app.CustomUser'
 ROLEPERMISSIONS_MODULE = 'msr_app.roles'
@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = '/home/ubuntu/MSR/static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -129,3 +130,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://d1pu68l2i4fez5.cloudfront.net'
+]

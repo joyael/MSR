@@ -2,6 +2,7 @@
 {% load static %}
 {% block extrahead %}
 <link rel="stylesheet" type="text/css" href="{% static 'msr_app/css/custom_admin.css' %}">
+{{ block.super }}
 {% endblock %}
 
 {% block content %}
@@ -23,8 +24,7 @@
         <p class="staff-count-value">{{ total_staff_count }}</p>
     </div>
 </div>
-
 {% endif %}
-    {{ block.super }}  {# This will include the original content #}
 
+    {{ block.super }}  {# This will include the original content #}
 {% endblock %}
